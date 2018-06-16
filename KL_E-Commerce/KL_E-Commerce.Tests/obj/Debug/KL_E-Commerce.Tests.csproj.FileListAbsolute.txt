@@ -75,3 +75,4 @@ C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Tests\obj\De
 C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Tests\obj\Debug\KL_E-Commerce.Tests.csproj.CopyComplete
 C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Tests\obj\Debug\KL_E-Commerce.Tests.dll
 C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Tests\obj\Debug\KL_E-Commerce.Tests.pdb
+C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Tests\bin\Debug\KL_E-Commerce.Domain.dll.config

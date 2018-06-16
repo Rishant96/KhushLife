@@ -144,3 +144,4 @@ C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\obj\Debu
 C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\obj\Debug\KL_E-Commerce.Web.csproj.CopyComplete
 C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\obj\Debug\KL_E-Commerce.Web.dll
 C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\obj\Debug\KL_E-Commerce.Web.pdb
+C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\bin\KL_E-Commerce.Domain.dll.config
