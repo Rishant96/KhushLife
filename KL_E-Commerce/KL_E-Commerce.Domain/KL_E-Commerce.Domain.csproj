@@ -61,10 +61,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IStorage.cs" />
+    <Compile Include="Entities\Cart.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Manufacturer.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Store.cs" />
+    <Compile Include="Entities\Utilities\Address.cs" />
+    <Compile Include="Entities\Utilities\Attribute.cs" />
+    <Compile Include="Entities\Utilities\Brand.cs" />
+    <Compile Include="Entities\Utilities\CartItem.cs" />
+    <Compile Include="Entities\Utilities\Specification.cs" />
+    <Compile Include="Entities\Utilities\StockedStore.cs" />
+    <Compile Include="Entities\Vendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
