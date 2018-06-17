@@ -13,9 +13,7 @@ namespace KL_E_Commerce.Domain.Entities
         public int Id { get; set; }
         public Address Address { get; set; }
 
-        public int VendorId { get; set; }
+        public string VendorId { get; set; }
         public Vendor Vendor { get; set; }
-
-
     }
 }

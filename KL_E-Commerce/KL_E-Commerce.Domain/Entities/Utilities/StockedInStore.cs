@@ -10,20 +10,25 @@ namespace KL_E_Commerce.Domain.Entities.Utilities
     {
         public int Id { get; set; }
         public float Price { get; set; }
-        public int Stock { get; set; }
+        public int? Stock { get; set; }
+        public bool IsStocked { get; set; }
         public ProductStatus Status { get; set; }
+    
+        public string VendorId { get; set; }
+        public virtual Vendor Vendor { get; set; }
 
         public int StoreId { get; set; }
         public virtual Store Store { get; set; }
 
-        public int ProductId { get; set; }
-        public virtual Product Product { get; set; }
+        public int StockedProductId { get; set; }
+        public virtual StockedProduct StockedProduct { get; set; }
     }
 
     public enum ProductStatus
     {
         OutOfStock,
         InStock,
-        NotListed
+        NewArrival,
+        ComingSoon
     }
 }
