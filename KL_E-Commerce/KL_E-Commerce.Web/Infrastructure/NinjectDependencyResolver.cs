@@ -7,10 +7,10 @@ using Ninject;
 
 namespace KL_E_Commerce.Web.Infrastructure
 {
-    public class NinjectDependencyResolver
+    public class NinjectDependencyResolver : IDependencyResolver
     {
         private IKernel kernel;
-        
+            
         public NinjectDependencyResolver(IKernel kernelParam)
         {
             kernel = kernelParam;
@@ -29,7 +29,7 @@ namespace KL_E_Commerce.Web.Infrastructure
 
         private void AddBindings()
         {
-            // put bindings here
+            // Add Bindings
         }
     }
 }

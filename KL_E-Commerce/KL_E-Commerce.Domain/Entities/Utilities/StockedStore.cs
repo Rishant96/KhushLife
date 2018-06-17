@@ -9,6 +9,7 @@ namespace KL_E_Commerce.Domain.Entities.Utilities
     public class StockedInStore
     {
         public int Id { get; set; }
+        public float Price { get; set; }
         public int Stock { get; set; }
         public ProductStatus Status { get; set; }
 
