@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KL_E_Commerce.Domain.Entities
 {
-    public class Order
+    public class Order 
     {
         public int Id { get; set; }
         public DateTime OrderDate { get; set; }
@@ -16,8 +16,17 @@ namespace KL_E_Commerce.Domain.Entities
         public IDeliveryProvider DeliveryMethod { get; set; }
         public DateTime DeliverBy { get; set; }
         public int UserId { get; set; }
+        public OrderStatus Status { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; }
         public virtual User User { get; set; }
+    }
+
+    public enum OrderStatus
+    {
+        Processing,
+        Dispatched,
+        InTransit,
+        OutForDelivery
     }
 }

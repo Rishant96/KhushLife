@@ -11,13 +11,16 @@ namespace KL_E_Commerce.Domain.Entities
     {
         public int Id { get; set; }
         public int OwnerId { get; set; }
-        ICollection<CartItem> CartItems { get; set; }
         public float TotalPrice { get; set; }
         public CartStatus Status { get; set; }
+
+        public virtual ICollection<CartItem> CartItems { get; set; }
     }
 
     public enum CartStatus
     {
-
+        Empty,
+        Active,
+        Changed,
     }
 }

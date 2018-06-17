@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IDeliveryProvider.cs" />
+    <Compile Include="Abstract\IDisplayable.cs" />
     <Compile Include="Abstract\IStorage.cs" />
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Category.cs" />
@@ -85,10 +86,10 @@
     <Compile Include="Entities\Store.cs" />
     <Compile Include="Entities\Utilities\Address.cs" />
     <Compile Include="Entities\Utilities\Attribute.cs" />
-    <Compile Include="Entities\Utilities\Brand.cs" />
     <Compile Include="Entities\Utilities\CartItem.cs" />
     <Compile Include="Entities\Utilities\OrderItem.cs" />
     <Compile Include="Entities\Utilities\Specification.cs" />
+    <Compile Include="Entities\Utilities\SpecOption.cs" />
     <Compile Include="Entities\Utilities\StockedStore.cs" />
     <Compile Include="Entities\Utilities\User.cs" />
     <Compile Include="Entities\Vendor.cs" />
@@ -98,6 +99,5 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

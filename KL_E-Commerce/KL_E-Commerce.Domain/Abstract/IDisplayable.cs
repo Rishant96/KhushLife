@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KL_E_Commerce.Domain.Entities.Utilities
+namespace KL_E_Commerce.Domain.Abstract
 {
-    public class Brand
+    public interface IDisplayable
     {
+        int DisplayOrder { get; set; }
     }
 }
