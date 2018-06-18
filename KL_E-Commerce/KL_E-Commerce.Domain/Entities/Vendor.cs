@@ -9,6 +9,8 @@ namespace KL_E_Commerce.Domain.Entities
 {
     public class Vendor : User
     {
-        public Address Address { get; set; }
+        public ICollection<Address> Addresses { get; set; }
+
+        public ICollection<Store> Stores { get; set; }
     }
 }

@@ -17,13 +17,14 @@ namespace KL_E_Commerce.Domain.Entities.Utilities
         public virtual Store Store { get; set; }
 
         public int ProductId { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual StockedProduct Product { get; set; }
     }
 
     public enum ProductStatus
     {
         OutOfStock,
         InStock,
-        NotListed
+        NewArrival,
+        ComingSoon
     }
 }

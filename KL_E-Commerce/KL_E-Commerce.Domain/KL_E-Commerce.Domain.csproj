@@ -83,6 +83,7 @@
     <Compile Include="Entities\Manufacturer.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\StockedProduct.cs" />
     <Compile Include="Entities\Store.cs" />
     <Compile Include="Entities\Utilities\Address.cs" />
     <Compile Include="Entities\Utilities\Attribute.cs" />
@@ -90,7 +91,7 @@
     <Compile Include="Entities\Utilities\OrderItem.cs" />
     <Compile Include="Entities\Utilities\Specification.cs" />
     <Compile Include="Entities\Utilities\SpecOption.cs" />
-    <Compile Include="Entities\Utilities\StockedStore.cs" />
+    <Compile Include="Entities\Utilities\StockedInStore.cs" />
     <Compile Include="Entities\Utilities\User.cs" />
     <Compile Include="Entities\Vendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

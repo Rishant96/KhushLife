@@ -15,7 +15,5 @@ namespace KL_E_Commerce.Domain.Entities
 
         public int VendorId { get; set; }
         public Vendor Vendor { get; set; }
-
-
     }
 }
