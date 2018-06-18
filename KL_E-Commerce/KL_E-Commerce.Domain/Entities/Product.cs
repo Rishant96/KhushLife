@@ -1,5 +1,6 @@
 ﻿using KL_E_Commerce.Domain.Abstract;
 using KL_E_Commerce.Domain.Entities.Utilities;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace KL_E_Commerce.Domain.Entities
         public bool HasVariants { get; set; }
         
         public int VendorId { get; set; }
-        public virtual Vendor Vendor { get; set; }
+        public virtual IdentityUser Vendor { get; set; }
 
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }

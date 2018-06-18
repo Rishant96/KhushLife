@@ -1,4 +1,5 @@
 ﻿using KL_E_Commerce.Domain.Entities.Utilities;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace KL_E_Commerce.Domain.Entities
 
 
         public int VendorId { get; set; }
-        public virtual Vendor Vendor { get; set; }
+        public virtual IdentityUser Vendor { get; set; }
 
         public int StockedInStoreId { get; set; }
         public ICollection<StockedInStore> Store { get; set; }

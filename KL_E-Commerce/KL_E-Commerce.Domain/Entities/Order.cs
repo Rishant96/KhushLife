@@ -1,5 +1,6 @@
 ﻿using KL_E_Commerce.Domain.Abstract;
 using KL_E_Commerce.Domain.Entities.Utilities;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace KL_E_Commerce.Domain.Entities
         public OrderStatus Status { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; }
-        public virtual User User { get; set; }
+        public virtual IdentityUser User { get; set; }
     }
 
     public enum OrderStatus
