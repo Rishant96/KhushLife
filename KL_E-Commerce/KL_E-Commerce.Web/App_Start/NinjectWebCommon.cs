@@ -53,6 +53,8 @@ namespace KL_E_Commerce.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            System.Web.Mvc.DependencyResolver.SetResolver(new
+                KL_E_Commerce.Web.Infrastructure.NinjectDependencyResolver(kernel));
         }        
     }
 }
