@@ -252,10 +252,6 @@
     <Content Include="Areas\Vendors\Views\web.config" />
     <Content Include="Areas\Vendors\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Vendors\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Vendors\Views\Vendor\Register.cshtml" />
-    <Content Include="Areas\Vendors\Views\Vendor\Home.cshtml" />
-    <Content Include="Areas\Vendors\Views\Vendor\Index.cshtml" />
-    <Content Include="Areas\Vendors\Views\Vendor\Login.cshtml" />
     <Content Include="Areas\Vendors\Views\Store\Create.cshtml" />
     <Content Include="Areas\Vendors\Views\Store\Index.cshtml" />
     <Content Include="Areas\Vendors\Views\Home\Index.cshtml" />
@@ -264,6 +260,10 @@
     <Content Include="Areas\Vendors\Views\Category\AddAttributePartial.cshtml" />
     <Content Include="Areas\Vendors\Views\Category\Details.cshtml" />
     <Content Include="Areas\Vendors\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Vendors\Views\Vendor\Home.cshtml" />
+    <Content Include="Areas\Vendors\Views\Vendor\Index.cshtml" />
+    <Content Include="Areas\Vendors\Views\Vendor\Login.cshtml" />
+    <Content Include="Areas\Vendors\Views\Vendor\Register.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -312,7 +312,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Vendors\Views\tore\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -79,5 +79,7 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
                 return View("Index");
             return View(model);
         }
+
+        // Edit and Delete
     }
 }

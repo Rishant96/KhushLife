@@ -15,7 +15,7 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Vendors/Store
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
             return View();
         }
@@ -50,5 +50,6 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
             return View(model);
         }
 
+        // Details Page
     }
 }
