@@ -1,0 +1,55 @@
+﻿@model KL_E_Commerce.Web.Areas.Vendors.Models.IndexCategoryViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("+ Create Category", "Create", new { id = 0, isBase = true })
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Id")
+        </th>
+        <th>
+            @Html.Label("Name")
+        </th>
+        <th>
+            @Html.Label("Attributes")
+        </th>
+        <th>
+            @Html.Label("Parent")
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Categories)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(m => item.Id)
+        </td>
+        <td>
+            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+        </td>
+        <td>
+            <ul>
+            @foreach (var attr in item.Attributes)
+            {
+                <li>@Html.DisplayFor(m => attr.Name)</li>
+            }
+            </ul>
+        </td>
+        <td>
+            @if (item.Parent == null)
+            {
+                @Html.Label("-")
+            }
+            else
+            {
+                @Html.DisplayFor(m => item.Parent.Name)
+            }
+        </td>
+    </tr>
+    }
+</table>
