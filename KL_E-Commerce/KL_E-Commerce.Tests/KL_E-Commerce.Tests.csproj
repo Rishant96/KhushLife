@@ -119,8 +119,8 @@
       <Project>{4b160323-d378-434e-b2e3-574eed2c8ad8}</Project>
       <Name>KL_E-Commerce.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\KL_E-Commerce.Web\KL_E-Commerce.Web.csproj">
-      <Project>{0FA0AF68-9DAA-460F-AE6B-6697A059F604}</Project>
+    <ProjectReference Include="..\KL_E-Commerce.Web\KL_E-Commerce.Web\KL_E-Commerce.Web.csproj">
+      <Project>{0f9d8d6e-17c0-4cd8-827a-b5d682a74857}</Project>
       <Name>KL_E-Commerce.Web</Name>
     </ProjectReference>
   </ItemGroup>
