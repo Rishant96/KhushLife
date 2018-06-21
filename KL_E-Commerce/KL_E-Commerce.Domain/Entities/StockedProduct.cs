@@ -13,20 +13,18 @@ namespace KL_E_Commerce.Domain.Entities
     {
         [Key]
         public int Id { get; set; }
-        public float BasePrice { get; set; }
 
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
 
-        public int ManufacturerId { get; set; }
-        public virtual Manufacturer Manufacturer { get; set; }
+        //public int ManufacturerId { get; set; }
+        //public virtual Manufacturer Manufacturer { get; set; }
 
         public int VendorId { get; set; }
         public virtual IdentityUser Vendor { get; set; }
+        
+        public ICollection<StockedInStore> Stores { get; set; }
 
-        public int StockedInStoreId { get; set; }
-        public ICollection<StockedInStore> Store { get; set; }
-
-        public virtual ICollection<Utilities.finalSpec> Specifications { get; set; } 
+        public virtual ICollection<Utilities.FinalSpec> Specifications { get; set; } 
     }
 }

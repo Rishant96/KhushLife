@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
 {
@@ -17,7 +18,11 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
         // GET: Vendors/Store
         public ActionResult Index(int? id)
         {
-            return View();
+            var model = db.StockedInStores
+                .Include(m => m.Product)
+                .Include(m => m.Store)
+                .Include(m => m.Product.Product).ToList();
+            return View(new IndexStoreViewModel { StockedInStores = model });
         }
 
         public ActionResult Create()

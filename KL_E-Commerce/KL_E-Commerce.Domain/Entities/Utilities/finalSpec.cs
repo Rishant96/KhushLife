@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace KL_E_Commerce.Domain.Entities.Utilities
 {
-    public class finalSpec
+    public class FinalSpec
     {
         public int Id { get; set; }
         public string Value { get; set; }
-
-        public int Stock { get; set; }
 
         public int AttributeId { get; set; }
         public virtual Attribute Attribute { get; set; }

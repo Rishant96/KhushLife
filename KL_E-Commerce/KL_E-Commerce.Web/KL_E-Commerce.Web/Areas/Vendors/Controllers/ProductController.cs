@@ -92,5 +92,54 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
             }
             return View(model);
         }
+
+        public ActionResult Stock(int? id)
+        {
+            if (id == null) return RedirectToAction("Index");
+            var prod = db.Products.Include(m => m.Specifications).FirstOrDefault(m => m.Id == id);
+            if (prod == null) RedirectToAction("Index");
+            var model = new StockProductViewModel { Product = prod, ProdId = prod.Id };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Stock([Bind(Include = "Stock,Price")] StockProductViewModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                int id = int.Parse(Request.Form["prodID"]);
+                model.Product = db.Products.Include(m => m.Specifications).FirstOrDefault(m => m.Id == id);
+                var finalSpecs = new List<FinalSpec>();
+                foreach(var spec in model.Product.Specifications)
+                {
+                    finalSpecs.Add(new FinalSpec {
+                        AttributeId = spec.AttributeId,
+                        Value = spec.SpecOptions.First().Value
+                    });
+                }
+                var stkProd = new StockedProduct
+                {
+                    ProductId = model.Product.Id,
+                    Specifications = finalSpecs
+                };
+                stkProd = db.StockedProducts.Add(stkProd);
+                db.SaveChanges();
+                var stkStore = new StockedInStore
+                {
+                    Price = model.Price,
+                    StockedProductId = stkProd.Id,
+                    Stock = model.Stock,
+                    StoreId = 1,
+                    Status = (model.Stock > 0) ? ProductStatus.InStock : ProductStatus.OutOfStock 
+                };
+                db.StockedInStores.Add(stkStore);
+                db.SaveChanges();
+                return RedirectToAction("Index", controllerName: "Store");
+            }
+            return View(model);
+        }
+
+
     }
 }

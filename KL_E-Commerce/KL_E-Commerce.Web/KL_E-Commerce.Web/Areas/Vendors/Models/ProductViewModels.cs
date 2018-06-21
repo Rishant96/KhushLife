@@ -19,4 +19,12 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Models
         public List<Domain.Entities.Utilities.Attribute> Attributes { get; set; }
         public int Id { get; set; }
     }
+
+    public class StockProductViewModel
+    {
+        public int Stock { get; set; }
+        public float Price { get; set; }
+        public int ProdId { get; set; }
+        public Product Product { get; set; }
+    }
 }

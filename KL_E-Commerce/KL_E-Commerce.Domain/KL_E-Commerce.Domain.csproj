@@ -79,7 +79,6 @@
     <Compile Include="Abstract\IStorage.cs" />
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Category.cs" />
-    <Compile Include="Entities\Manufacturer.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\StockedProduct.cs" />
@@ -87,7 +86,7 @@
     <Compile Include="Entities\Utilities\Address.cs" />
     <Compile Include="Entities\Utilities\Attribute.cs" />
     <Compile Include="Entities\Utilities\CartItem.cs" />
-    <Compile Include="Entities\Utilities\finalSpec.cs" />
+    <Compile Include="Entities\Utilities\FinalSpec.cs" />
     <Compile Include="Entities\Utilities\OrderItem.cs" />
     <Compile Include="Entities\Utilities\Specification.cs" />
     <Compile Include="Entities\Utilities\SpecOption.cs" />

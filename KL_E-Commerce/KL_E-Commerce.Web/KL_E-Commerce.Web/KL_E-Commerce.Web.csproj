@@ -245,6 +245,14 @@
     <Compile Include="Migrations\201806210616258_editedProducts3.Designer.cs">
       <DependentUpon>201806210616258_editedProducts3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806210730124_editedStockProductsEtc.cs" />
+    <Compile Include="Migrations\201806210730124_editedStockProductsEtc.Designer.cs">
+      <DependentUpon>201806210730124_editedStockProductsEtc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806210756322_editedStockProductsManufacturer.cs" />
+    <Compile Include="Migrations\201806210756322_editedStockProductsManufacturer.Designer.cs">
+      <DependentUpon>201806210756322_editedStockProductsManufacturer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -282,6 +290,7 @@
     <Content Include="Areas\Vendors\Views\Vendor\Login.cshtml" />
     <Content Include="Areas\Vendors\Views\Vendor\Register.cshtml" />
     <Content Include="Areas\Vendors\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Vendors\Views\Product\Stock.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -374,6 +383,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806210616258_editedProducts3.resx">
       <DependentUpon>201806210616258_editedProducts3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806210730124_editedStockProductsEtc.resx">
+      <DependentUpon>201806210730124_editedStockProductsEtc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806210756322_editedStockProductsManufacturer.resx">
+      <DependentUpon>201806210756322_editedStockProductsManufacturer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

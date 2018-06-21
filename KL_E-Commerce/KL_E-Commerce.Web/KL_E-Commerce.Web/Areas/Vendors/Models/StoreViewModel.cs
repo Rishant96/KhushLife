@@ -1,10 +1,17 @@
-﻿using System;
+﻿using KL_E_Commerce.Domain.Entities;
+using KL_E_Commerce.Domain.Entities.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace KL_E_Commerce.Web.Areas.Vendors.Models
 {
+    public class IndexStoreViewModel
+    {
+        public List<StockedInStore> StockedInStores { get; set; }
+    }
+
     public class CreateStoreViewModel
     {
         public string Name { get; set; }

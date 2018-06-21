@@ -1,4 +1,5 @@
 ﻿using KL_E_Commerce.Domain.Entities;
+using KL_E_Commerce.Domain.Entities.Utilities;
 using KL_E_Commerce.Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
@@ -26,6 +27,7 @@ namespace KL_E_Commerce.Web.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<StockedProduct> StockedProducts { get; set; }
+        public DbSet<StockedInStore> StockedInStores { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
 
