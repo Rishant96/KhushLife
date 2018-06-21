@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
 {
+    [Authorize(Roles = "Vendor")]
     public class CategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

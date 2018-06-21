@@ -11,6 +11,7 @@ using System.Data.Entity;
 
 namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
 {
+    [Authorize(Roles = "Vendor")]
     public class StoreController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

@@ -2,6 +2,7 @@
 using KL_E_Commerce.Web.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,6 +56,7 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
         #endregion
 
         // GET: Vendors/Home
+        [Authorize(Roles = "Vendor")]
         public ActionResult Index()
         {
             return View();
@@ -128,6 +130,22 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+        }
+
+        private IAuthenticationManager AuthenticationManager
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Authentication;
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
         }
 
         private void AddErrors(IdentityResult result)

@@ -213,45 +213,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806190949039_eStoreInit.cs" />
-    <Compile Include="Migrations\201806190949039_eStoreInit.Designer.cs">
-      <DependentUpon>201806190949039_eStoreInit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806190950226_eStore_1.cs" />
-    <Compile Include="Migrations\201806190950226_eStore_1.Designer.cs">
-      <DependentUpon>201806190950226_eStore_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806200639311_categoryEdit.cs" />
-    <Compile Include="Migrations\201806200639311_categoryEdit.Designer.cs">
-      <DependentUpon>201806200639311_categoryEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806200713246_categoryEdit1.cs" />
-    <Compile Include="Migrations\201806200713246_categoryEdit1.Designer.cs">
-      <DependentUpon>201806200713246_categoryEdit1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806210445569_editedProducts.cs" />
-    <Compile Include="Migrations\201806210445569_editedProducts.Designer.cs">
-      <DependentUpon>201806210445569_editedProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806210512581_editedProducts1.cs" />
-    <Compile Include="Migrations\201806210512581_editedProducts1.Designer.cs">
-      <DependentUpon>201806210512581_editedProducts1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806210515394_editedProducts2.cs" />
-    <Compile Include="Migrations\201806210515394_editedProducts2.Designer.cs">
-      <DependentUpon>201806210515394_editedProducts2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806210616258_editedProducts3.cs" />
-    <Compile Include="Migrations\201806210616258_editedProducts3.Designer.cs">
-      <DependentUpon>201806210616258_editedProducts3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806210730124_editedStockProductsEtc.cs" />
-    <Compile Include="Migrations\201806210730124_editedStockProductsEtc.Designer.cs">
-      <DependentUpon>201806210730124_editedStockProductsEtc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806210756322_editedStockProductsManufacturer.cs" />
-    <Compile Include="Migrations\201806210756322_editedStockProductsManufacturer.Designer.cs">
-      <DependentUpon>201806210756322_editedStockProductsManufacturer.cs</DependentUpon>
+    <Compile Include="Migrations\201806211045232_Init.cs" />
+    <Compile Include="Migrations\201806211045232_Init.Designer.cs">
+      <DependentUpon>201806211045232_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -291,6 +255,7 @@
     <Content Include="Areas\Vendors\Views\Vendor\Register.cshtml" />
     <Content Include="Areas\Vendors\Views\Product\Create.cshtml" />
     <Content Include="Areas\Vendors\Views\Product\Stock.cshtml" />
+    <Content Include="Areas\Vendors\Views\Shared\_VendorLoginPartial.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -360,35 +325,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806190949039_eStoreInit.resx">
-      <DependentUpon>201806190949039_eStoreInit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806190950226_eStore_1.resx">
-      <DependentUpon>201806190950226_eStore_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806200639311_categoryEdit.resx">
-      <DependentUpon>201806200639311_categoryEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806200713246_categoryEdit1.resx">
-      <DependentUpon>201806200713246_categoryEdit1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806210445569_editedProducts.resx">
-      <DependentUpon>201806210445569_editedProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806210512581_editedProducts1.resx">
-      <DependentUpon>201806210512581_editedProducts1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806210515394_editedProducts2.resx">
-      <DependentUpon>201806210515394_editedProducts2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806210616258_editedProducts3.resx">
-      <DependentUpon>201806210616258_editedProducts3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806210730124_editedStockProductsEtc.resx">
-      <DependentUpon>201806210730124_editedStockProductsEtc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806210756322_editedStockProductsManufacturer.resx">
-      <DependentUpon>201806210756322_editedStockProductsManufacturer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806211045232_Init.resx">
+      <DependentUpon>201806211045232_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

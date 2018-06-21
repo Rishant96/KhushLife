@@ -11,6 +11,7 @@ using KL_E_Commerce.Domain.Entities.Utilities;
 
 namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
 {
+    [Authorize(Roles = "Vendor")]
     public class ProductController : Controller
     {
         private Category category;

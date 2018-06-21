@@ -3,8 +3,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    @Html.ActionLink("Go to Dashboard", "Index", controllerName: "Vendor")
+}
 
-@* Register as a Vendor *@
-@* Login - Vendor *@
-@* SignOut - Vendor *@
+<h2>Home Index</h2>

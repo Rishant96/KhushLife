@@ -12,7 +12,7 @@ namespace KL_E_Commerce.Web
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            // createRoles();
+            createRoles();
         }
 
         private void createRoles()

@@ -10,7 +10,6 @@ namespace KL_E_Commerce.Web.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "KL_E_Commerce.Web.DAL.ApplicationDbContext";
         }
 
         protected override void Seed(KL_E_Commerce.Web.DAL.ApplicationDbContext context)
