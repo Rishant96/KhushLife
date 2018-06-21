@@ -23,6 +23,7 @@
         </th>
     </tr>
 
+
     @foreach (var item in Model.Categories)
     {
     <tr>
@@ -34,10 +35,10 @@
         </td>
         <td>
             <ul>
-            @foreach (var attr in item.Attributes)
-            {
-                <li>@Html.DisplayFor(m => attr.Name)</li>
-            }
+                @foreach (var attr in item.Attributes)
+                {
+                    <li>@Html.DisplayFor(m => attr.Name)</li>
+                }
             </ul>
         </td>
         <td>
@@ -52,4 +53,5 @@
         </td>
     </tr>
     }
+    
 </table>

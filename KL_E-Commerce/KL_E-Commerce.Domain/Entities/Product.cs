@@ -28,7 +28,6 @@ namespace KL_E_Commerce.Domain.Entities
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
         
-        public virtual IDictionary<Utilities.Attribute, Specification> Specifications { get; set; }
-
+        public virtual ICollection<Specification> Specifications { get; set; }
     }
 }

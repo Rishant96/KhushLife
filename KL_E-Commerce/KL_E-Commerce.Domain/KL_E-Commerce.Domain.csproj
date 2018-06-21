@@ -87,6 +87,7 @@
     <Compile Include="Entities\Utilities\Address.cs" />
     <Compile Include="Entities\Utilities\Attribute.cs" />
     <Compile Include="Entities\Utilities\CartItem.cs" />
+    <Compile Include="Entities\Utilities\finalSpec.cs" />
     <Compile Include="Entities\Utilities\OrderItem.cs" />
     <Compile Include="Entities\Utilities\Specification.cs" />
     <Compile Include="Entities\Utilities\SpecOption.cs" />

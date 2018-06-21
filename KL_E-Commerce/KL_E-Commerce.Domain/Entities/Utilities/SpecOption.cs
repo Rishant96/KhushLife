@@ -11,6 +11,7 @@ namespace KL_E_Commerce.Domain.Entities.Utilities
     {
         public int Id { get; set; }
         public string Value { get; set; }
+        public float SpecCost { get; set; }
 
         public bool IsSelected { get; set; }
         public bool IsPreSelected { get; set; }

@@ -128,3 +128,7 @@ C:\Users\Rishant\source\repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\KL_E-Com
 C:\Users\Rishant\source\repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\KL_E-Commerce.Web\obj\Debug\KL_E_Commerce.Web.Migrations.eStore_1.resources
 C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\KL_E-Commerce.Web\obj\Debug\KL_E_Commerce.Web.Migrations.categoryEdit.resources
 C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\KL_E-Commerce.Web\obj\Debug\KL_E_Commerce.Web.Migrations.categoryEdit1.resources
+C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\KL_E-Commerce.Web\obj\Debug\KL_E_Commerce.Web.Migrations.editedProducts.resources
+C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\KL_E-Commerce.Web\obj\Debug\KL_E_Commerce.Web.Migrations.editedProducts1.resources
+C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\KL_E-Commerce.Web\obj\Debug\KL_E_Commerce.Web.Migrations.editedProducts2.resources
+C:\Users\Rishant\Source\Repos\KhushLife\KL_E-Commerce\KL_E-Commerce.Web\KL_E-Commerce.Web\obj\Debug\KL_E_Commerce.Web.Migrations.editedProducts3.resources

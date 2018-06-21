@@ -202,6 +202,7 @@
     <Compile Include="Areas\Vendors\Controllers\VendorController.cs" />
     <Compile Include="Areas\Vendors\Models\CategoryViewModels.cs" />
     <Compile Include="Areas\Vendors\Models\LoginVendor_ViewModel.cs" />
+    <Compile Include="Areas\Vendors\Models\ProductViewModels.cs" />
     <Compile Include="Areas\Vendors\Models\RegisterVendorViewModel.cs" />
     <Compile Include="Areas\Vendors\Models\StoreViewModel.cs" />
     <Compile Include="Areas\Vendors\VendorsAreaRegistration.cs" />
@@ -227,6 +228,22 @@
     <Compile Include="Migrations\201806200713246_categoryEdit1.cs" />
     <Compile Include="Migrations\201806200713246_categoryEdit1.Designer.cs">
       <DependentUpon>201806200713246_categoryEdit1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806210445569_editedProducts.cs" />
+    <Compile Include="Migrations\201806210445569_editedProducts.Designer.cs">
+      <DependentUpon>201806210445569_editedProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806210512581_editedProducts1.cs" />
+    <Compile Include="Migrations\201806210512581_editedProducts1.Designer.cs">
+      <DependentUpon>201806210512581_editedProducts1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806210515394_editedProducts2.cs" />
+    <Compile Include="Migrations\201806210515394_editedProducts2.Designer.cs">
+      <DependentUpon>201806210515394_editedProducts2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806210616258_editedProducts3.cs" />
+    <Compile Include="Migrations\201806210616258_editedProducts3.Designer.cs">
+      <DependentUpon>201806210616258_editedProducts3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -264,6 +281,7 @@
     <Content Include="Areas\Vendors\Views\Vendor\Index.cshtml" />
     <Content Include="Areas\Vendors\Views\Vendor\Login.cshtml" />
     <Content Include="Areas\Vendors\Views\Vendor\Register.cshtml" />
+    <Content Include="Areas\Vendors\Views\Product\Create.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -344,6 +362,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806200713246_categoryEdit1.resx">
       <DependentUpon>201806200713246_categoryEdit1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806210445569_editedProducts.resx">
+      <DependentUpon>201806210445569_editedProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806210512581_editedProducts1.resx">
+      <DependentUpon>201806210512581_editedProducts1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806210515394_editedProducts2.resx">
+      <DependentUpon>201806210515394_editedProducts2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806210616258_editedProducts3.resx">
+      <DependentUpon>201806210616258_editedProducts3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
