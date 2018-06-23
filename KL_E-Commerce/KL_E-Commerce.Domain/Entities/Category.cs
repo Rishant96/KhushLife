@@ -25,6 +25,9 @@ namespace KL_E_Commerce.Domain.Entities
         public int? CategoryId { get; set; }
         public virtual Category Parent { get; set; }
 
+        public int StoreId { get; set; }
+        public virtual Store Store { get; set; }
+
         [NotMapped]
         public List<Category> ChildCategories { get; set; }
     }

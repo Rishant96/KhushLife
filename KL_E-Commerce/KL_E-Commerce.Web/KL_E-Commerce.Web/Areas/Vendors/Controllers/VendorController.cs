@@ -56,7 +56,7 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
         #endregion
 
         // GET: Vendors/Home
-        [Authorize(Roles = "Vendor")]
+        [Authorize]
         public ActionResult Index()
         {
             return View();

@@ -1,7 +1,8 @@
-﻿@{
+﻿@using Microsoft.AspNet.Identity
+@{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 <hr />
-@Html.ActionLink("Stores", "Index", "Store", null, null)
+@Html.ActionLink("Stores", "Index", "Store", new { id = User.Identity.GetUserId() }, null)

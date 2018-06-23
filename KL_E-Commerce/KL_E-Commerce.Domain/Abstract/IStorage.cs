@@ -11,6 +11,6 @@ namespace KL_E_Commerce.Domain.Abstract
     {
         int Id { get; set; }
         Address Address { get; set; }
-        int VendorId { get; set; }
+        string VendorId { get; set; }
     }
 }

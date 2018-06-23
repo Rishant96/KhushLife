@@ -6,45 +6,65 @@
 <h2>Index</h2>
 
 @Html.ActionLink("+ Create Store", "Create")
-
+<br />
 @* List all stores belonging to the logged-in Vendor *@
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.Label("Store Id")
-        </th>
-        <th>
-            @Html.Label("Store Name")
-        </th>
-        <th>
-            @Html.Label("Product")
-        </th>
-        <th>
-            @Html.Label("Stock")
-        </th>
-        <th>
-            @Html.Label("Status")
-        </th>
-    </tr>
-    @foreach(var item in Model.StockedInStores)
-    {
-    <tr>
-        <td>
-            @Html.DisplayFor(m => item.StoreId)
-        </td>
-        <td>
-            @Html.DisplayFor(m => item.Store.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(m => item.Product.Product.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(m => item.Stock)
-        </td>
-        <td>
-            @Html.DisplayFor(m => item.Status)
-        </td>
-    </tr>
-    }
-</table>
+@foreach (var store in Model.Stores)
+{
+    <text>Store: </text>@Html.ActionLink(store.Name, "Index", controllerName: "Category", routeValues: new { id = store.Id }, htmlAttributes: null )
+    <table class="table">
+        <tr>
+            <th>
+                @Html.Label("Id")
+            </th>
+            <th>
+                @Html.Label("Name")
+            </th>
+            <th>
+                @Html.Label("Description")
+            </th>
+            <th>
+                @Html.Label("Category")
+            </th>
+            <th>
+                @Html.Label("Stock")
+            </th>
+            <th>
+                @Html.Label("Price")
+            </th>
+            <th>
+                @Html.Label("Status")
+            </th>
+        </tr>
+        @{ 
+            var stockedProducts = Model.StockedProducts[store];
+        }
+        @foreach (var stkProd in stockedProducts)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(m => stkProd.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(m => stkProd.Product.Product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(m => stkProd.Product.Product.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(m => stkProd.Product.Product.Category.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(m => stkProd.Stock)
+            </td>
+            <td>
+                @Html.DisplayFor(m => stkProd.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(m => stkProd.Status)
+            </td>
+        </tr>
+        }
+    </table>
+    <br />
+}

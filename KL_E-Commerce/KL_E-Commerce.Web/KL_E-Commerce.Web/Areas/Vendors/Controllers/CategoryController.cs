@@ -10,14 +10,16 @@ using System.Web.Mvc;
 
 namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
 {
-    [Authorize(Roles = "Vendor")]
+    [Authorize]
     public class CategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var model = db.Categories.Include(m => m.Attributes).ToList();
+            if (id == null) return View("Error"); 
+            var model = db.Categories.Where(m => m.StoreId == (int)id).Include(m => m.Attributes).ToList();
+            TempData["store"] = (int)id;
             return View(new IndexCategoryViewModel { Categories = model });
         }
 
@@ -57,12 +59,17 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
                     if (model.Attributes == null) model.Attributes = new List<Domain.Entities.Utilities.Attribute>();
                     model.Attributes.Add(atrb);
                 }
+
+                int storeId = (int) TempData["store"];
+
                 db.Categories.Add(new Category { Name = model.Name, IsBase = model.IsBase, DisplayOrder = 0,
-                    Description = model.Description, Attributes = model.Attributes, CategoryId = model.Id});
-                
+                    Description = model.Description, Attributes = model.Attributes, CategoryId = model.Id,
+                    StoreId = storeId
+                });
+
                 db.SaveChanges();
 
-                return RedirectToAction("Index", "Category");
+                return RedirectToAction("Index", new { id = storeId });
             }
             return View(model);
         }
@@ -82,5 +89,7 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
         }
 
         // Edit and Delete
+        // .Where(m => m.StoreId == (int)id)
+        // , StoreId = storeId
     }
 }

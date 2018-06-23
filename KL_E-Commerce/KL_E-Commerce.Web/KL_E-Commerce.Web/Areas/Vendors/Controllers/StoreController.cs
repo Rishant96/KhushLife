@@ -8,22 +8,32 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity;
 
 namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
 {
-    [Authorize(Roles = "Vendor")]
+    [Authorize]
     public class StoreController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Vendors/Store
-        public ActionResult Index(int? id)
+        public ActionResult Index(string id)
         {
-            var model = db.StockedInStores
-                .Include(m => m.Product)
-                .Include(m => m.Store)
-                .Include(m => m.Product.Product).ToList();
-            return View(new IndexStoreViewModel { StockedInStores = model });
+            if (string.IsNullOrEmpty(id)) return RedirectToAction("Index", controllerName: "Vendor");
+            var stores = db.Stores.Where(m => m.VendorId == id).ToList();
+            var stockedProducts = new Dictionary<Store, List<StockedInStore>>();
+            foreach (var store in stores)
+            {
+                stockedProducts.Add(store,
+                    db.StockedInStores
+                    .Include(m => m.Product)
+                    .Include(m => m.Product.Product)
+                    .Include(m => m.Product.Product.Category)
+                    .Where(m => m.StoreId == store.Id)
+                    .ToList());
+            }
+            return View(new IndexStoreViewModel { Stores = stores, StockedProducts = stockedProducts });
         }
 
         public ActionResult Create()
@@ -48,10 +58,10 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Controllers
                     Country = model.Country,
                     DisplayOrder = 0
                 };
-                var store = new Store { Name = model.Name, Address = addr };
+                var store = new Store { Name = model.Name, Address = addr, VendorId = User.Identity.GetUserId()};
                 db.Stores.Add(store);
                 db.SaveChanges();
-                return View("Index");
+                return RedirectToAction("Index", new { id = User.Identity.GetUserId() });
             }
             return View(model);
         }

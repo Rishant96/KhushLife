@@ -19,7 +19,9 @@ namespace KL_E_Commerce.Domain.Entities
         [Required]
         public Address Address { get; set; }
 
-        public int VendorId { get; set; }
+        public string VendorId { get; set; }
         public IdentityUser Vendor { get; set; }
+
+        public ICollection<Category> Categories { get; set; }
     }
 }

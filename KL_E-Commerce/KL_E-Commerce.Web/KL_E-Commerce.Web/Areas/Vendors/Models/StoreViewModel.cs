@@ -9,7 +9,8 @@ namespace KL_E_Commerce.Web.Areas.Vendors.Models
 {
     public class IndexStoreViewModel
     {
-        public List<StockedInStore> StockedInStores { get; set; }
+        public List<Store> Stores { get; set; }
+        public Dictionary<Store, List<StockedInStore>> StockedProducts { get; set; }
     }
 
     public class CreateStoreViewModel
